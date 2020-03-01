@@ -27,11 +27,12 @@ The third component of the repository is the machine learning components. These 
  
  
  # Installation Steps on Windows:
- * thing 1
- * thing 2
+ * Download all the contents of this repository.
+ * Run ```pip install``` for all dependencies of the app in your command line
+ * Turn your camera privacy settings on
+ * Run main.py
  
  
-
 
 
 Note: all of the source code can also be seen on GitHub at https://github.com/ShivaGanapathy/Dermatol or _
