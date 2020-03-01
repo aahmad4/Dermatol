@@ -1,0 +1,1503 @@
+<CreateAccountWindow>:
+    name: "create"
+
+    namee: namee
+    email: email
+    password: passw
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            canvas:
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+        LabelButton:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.1
+            font_size: (root.width**2 + root.height**2) / 15**4
+            text: "[u]Already have an account? Log In[/u]"
+            markup: True
+            on_release:
+                root.login()
+                root.manager.transition.direction = "left"
+                
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.12
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.submit()
+                root.manager.transition.direction = "left"
+                
+
+
+<LoginWindow>:
+    name: "login"
+
+    email: email
+    password: password
+
+    FloatLayout:
+
+        canvas:
+            Color:
+                rgb: 54/255, 57/255, 66/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+ 
+        Image:
+            source: "app_icon.png"
+            size_hint: .4, .4
+            pos_hint: {"x": .3, "top": 1.06}
+
+        Label:
+            text:"Email: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.7}
+            size_hint: 0.35, 0.12
+
+        TextInput:
+            id: email
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            pos_hint: {"x": 0.45 , "top":0.7}
+            size_hint: 0.4, 0.12
+
+        Label:
+            text:"Password: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.55}
+            size_hint: 0.35, 0.12
+
+        TextInput:
+            id: password
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            password: True
+            pos_hint: {"x": 0.45, "top":0.55}
+            size_hint: 0.4, 0.12
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.12
+            font_size: (root.width**2 + root.height**2) / 14**4
+            text: "Login"
+            on_release:
+                root.manager.transition.direction = "up"
+                root.loginBtn()
+
+        LabelButton:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.1
+            font_size: (root.width**2 + root.height**2) / 15**4
+            text: "[u]Don't have an account? Create One[/u]"
+            markup: True
+            on_release:
+                root.manager.transition.direction = "right"
+                root.createBtn()
+
+
+<P>:
+    TextInput:
+        font_size: 22
+        size_hint: .97, 0.9
+        pos_hint: {"x": 0.012, "y":0.05}
+        multiline: True
+        disabled: True
+        text: "Dermatol is a skin cancer prevention app which classifies skin lesions, moles, and diseases. We serve the North Carolina community by providing access to local support groups, doctors, and treatment centers. Users can navigate through the app using the app icons on the bottom bar or by using the main images on the app layout. Thank you for using our app!"
+
+<akiec>:
+    TextInput:
+        font_size: 18
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Our machine learning model suggests that this skin shows signs of Actinic keratoses and intrapithelial carcinoma / Bowen's disease (akiec). Keep in mind that the diagnosis is not absolute, and you should check with a doctor to verify. For more information about this disease, please click the link below. Thank you."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<bcc>:
+    TextInput:
+        font_size: 17
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Our machine learning model suggests that this skin shows signs of Basal cell carcinoma (bcc). Keep in mind that the diagnosis is not absolute, and you should check with a doctor to verify. For more information about this disease, please click the link below which will redirect you to a video on the specified disease. Thank you."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<bkl>:
+    TextInput:
+        font_size: 16
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Our machine learning model suggests that this skin shows signs of Benign keratosis-like lesions (solar lengitgines / seborheic karatoses and lichen-planus like keratoses, bkl). Keep in mind that the diagnosis is not absolute, and you should check with a doctor to verify. For more information about this disease, please click the link below. Thank you."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<df>:
+    TextInput:
+        font_size: 17
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Our machine learning model suggests that this skin shows signs of Dermatofibroma (df). Keep in mind that the diagnosis is not absolute, and you should check with a doctor to verify. For more information about this disease, please click the link below which will redirect you to a video on the specified disease. Thank you."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<mel>:
+    TextInput:
+        font_size: 17
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Our machine learning model suggests that this skin shows signs of Melanoma (mel). Keep in mind that the diagnosis is not absolute, and you should check with a doctor to verify. For more information about this disease, please click the link below which will redirect you to a video on the specified disease. Thank you."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<nv>:
+    TextInput:
+        font_size: 17
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Our machine learning model suggests that this skin shows signs of Melanocytic nevi (nv). Keep in mind that the diagnosis is not absolute, and you should check with a doctor to verify. For more information about this disease, please click the link below which will redirect you to a video on the specified disease. Thank you."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<vasc>:
+    TextInput:
+        font_size: 17
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Our machine learning model suggests that this skin shows signs of Vascular lesions (vasc). Keep in mind that the diagnosis is not absolute, and you should check with a doctor to verify. For more information about this disease, please click the link below which will redirect you to a video on the specified disease. Thank you."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<norm>:
+    TextInput:
+        font_size: 20
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Good News! our machine learning model suggests that your skin does not show any signs of any skin-related diseases. Follow the tips on the app to stay safe! Below, for more information, click on the link to learn more about skin safety tips."
+    Button:
+        font_size: 22
+        text: "Continue"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+<obj>:
+    TextInput:
+        font_size: 18
+        size_hint: 0.9, 0.6
+        pos_hint: {"x": 0.05, "y":.32}
+        multiline: True
+        disabled: True
+        text: "Sorry, we didn't recognize any skin in the provided image. Perhaps you didn't follow our steps. If this is a bug, you can report a bug in the provided section on our app and we will get back to you as soon as possible. Click the link down below to head straight to our reporting a bug form."
+    Button:
+        font_size: 22
+        text: "Report"
+        size_hint: .8, .2
+        pos_hint: {"x": .1, "y": .05}
+        on_press: root.openLink()
+
+
+<MainWindow>:
+    name: "main"
+
+    GridLayout:           
+        cols: 1
+
+        canvas:
+            Color:
+                rgb: 54/255, 57/255, 66/255 , 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+ 
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 20
+            padding: 20
+
+            canvas:
+                Color:
+                    rgb: 35/255, 39/255, 42/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                color: 1, 1, 1, 1
+                bold: True
+                halign: "left"
+                text:"Dermatol Skin Cancer Prevention"
+                size_hint: .1, .07
+                font_size: 45
+                pos_hint: {"x": .3, "top": .9}
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "camera"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "camera.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Camera'
+                font_size: 40
+                text_size: self.size
+                on_release:
+                    app.root.current = "camera"
+                    root.manager.transition.direction = "left"
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "gallery"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "gallery.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                    size: 190, 190
+
+            LabelButton:
+                bold: True
+                text: 'Gallery'
+                font_size: 40
+                text_size: self.size
+                on_release:
+                    app.root.current = "gallery"
+                    root.manager.transition.direction = "left"
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "safety"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "skin_safety.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Skin Safety'
+                font_size: 40
+                text_size: self.size
+                on_release:
+                    app.root.current = "safety"
+                    root.manager.transition.direction = "left"
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "community"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "community.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                    size: 120, 120
+
+            LabelButton:
+                bold: True
+                text: 'Community'
+                font_size: 40
+                text_size: self.size
+                on_release:
+                    app.root.current = "community"
+                    root.manager.transition.direction = "left"
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.ThePopup()
+                Image:
+                    source: "about.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'About'
+                font_size: 40
+                text_size: self.size
+                on_release: root.ThePopup()
+
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 6
+            spacing: 25.3
+            padding: 25.3
+
+            canvas: 
+                Color:
+                    rgb: 153/255, 170/255, 181/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            canvas:
+                Color:
+                    rgb: .5, .5, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            Button:
+                size_hint_x: None
+                width: 0
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "home.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "camera"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "camera.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "gallery"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "gallery.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                    size: 180, 180
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "login"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "logout.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+        
+<CameraClickScreen>:
+    orientation: 'horizontal'
+
+    GridLayout:           
+        cols: 1
+
+        canvas:
+            Color:
+                rgb: 54/255, 57/255, 66/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 20
+            padding: 20
+
+            canvas:
+                Color:
+                    rgb: 35/255, 39/255, 42/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                color: 1, 1, 1, 1
+                bold: True
+                text:"Dermatol Skin Cancer Prevention"
+                size_hint: .1, .07
+                font_size: 45
+                pos_hint: {"x": .3, "top": .9}
+
+        GridLayout:
+            cols:1
+            orientation: 'vertical'
+            spacing: 20
+            padding: 20
+
+            canvas:
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+
+      
+            Camera:
+                id: camera
+                resolution: (640, 480)
+                play: True
+                allow_stretch: True
+
+
+            Button:
+                background_color: 0, 0, 0, 0
+                size_hint_y: None
+                height: 40
+                on_press:
+                    root.capture()
+                    # root refers to <CameraClickScreen>
+                    # app refers to TestCamera, app.root refers to the GridLayout: at the top
+                Image:
+                    source: "capture.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 6
+            spacing: 25.3
+            padding: 25.3
+
+            canvas: 
+                Color:
+                    rgb: 153/255, 170/255, 181/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            canvas:
+                Color:
+                    rgb: .5, .5, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            Button:
+                size_hint_x: None
+                width: 0
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "home.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "camera"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "camera.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "gallery"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "gallery.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                    size: 180, 180
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "login"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "logout.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+<SafetyWindow>
+    name: "safety"
+
+    GridLayout:           
+        cols: 1
+
+        canvas:
+            Color:
+                rgb: 54/255, 57/255, 66/255 , 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+ 
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 20
+            padding: 20
+
+            canvas:
+                Color:
+                    rgb: 35/255, 39/255, 42/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                color: 1, 1, 1, 1
+                bold: True
+                halign: "left"
+                text:"Dermatol Skin Cancer Prevention"
+                size_hint: .1, .07
+                font_size: 45
+                pos_hint: {"x": .3, "top": .9}
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink1()
+                Image:
+                    source: "safety1.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Sun Safety'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink1()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink4()
+                Image:
+                    source: "safety4.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Skin Cancer'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink4()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink2()
+                Image:
+                    source: "safety2.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Skin Care Tips'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink2()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink3()
+                Image:
+                    source: "safety3.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Skin Cancer Prevention'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink3()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink5()
+                Image:
+                    source: "safety5.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Donate'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink5()
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 6
+            spacing: 25.3
+            padding: 25.3
+
+            canvas: 
+                Color:
+                    rgb: 153/255, 170/255, 181/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            canvas:
+                Color:
+                    rgb: .5, .5, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            Button:
+                size_hint_x: None
+                width: 0
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "home.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "camera"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "camera.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "gallery"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "gallery.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                    size: 180, 180
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "login"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "logout.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+<GalleryWindow>:
+    name: "gallery"
+
+    GridLayout:           
+        cols: 1
+
+        canvas:
+            Color:
+                rgb: 54/255, 57/255, 66/255, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 20
+            padding: 20
+
+            canvas:
+                Color:
+                    rgb: 35/255, 39/255, 42/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                color: 1, 1, 1, 1
+                bold: True
+                text:"Dermatol Skin Cancer Prevention"
+                size_hint: .1, .07
+                font_size: 45
+                pos_hint: {"x": .3, "top": .9}
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            cols: 1
+            spacing: 40
+            padding: 40
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            TextInput:
+                color: 0, 0, 0, 1
+                font_size: 36
+                multiline: True
+                text: "This page serves as an alternative to the scanning page. If you already have a picture ready to be analyzed by our comprehensive machine learning software, please follow accordingly with the following steps. First click on the upload button down below and upload your picture. Within seconds, you will be prompted with a popup that contains the results of your scanned image. We hope it helps, good luck!"
+                disabled: True
+
+
+            FileChoose:
+                background_color: 0, 0, 0, 0
+                on_release: self.choose()
+                size_hint_y: None
+                height: 50
+                Image:
+                    source: "upload.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 6
+            spacing: 25.3
+            padding: 25.3
+
+            canvas: 
+                Color:
+                    rgb: 153/255, 170/255, 181/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            canvas:
+                Color:
+                    rgb: .5, .5, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            Button:
+                size_hint_x: None
+                width: 0
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "home.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "camera"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "camera.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "gallery"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "gallery.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                    size: 180, 180
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "login"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "logout.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+<CommunityWindow>
+    name: "community"
+
+    GridLayout:           
+        cols: 1
+
+        canvas:
+            Color:
+                rgb: 54/255, 57/255, 66/255 , 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+ 
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 20
+            padding: 20
+
+            canvas:
+                Color:
+                    rgb: 35/255, 39/255, 42/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                color: 1, 1, 1, 1
+                bold: True
+                halign: "left"
+                text:"Dermatol Skin Cancer Prevention"
+                size_hint: .1, .07
+                font_size: 45
+                pos_hint: {"x": .3, "top": .9}
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink1()
+                Image:
+                    source: "community1.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Doctors'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink1()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink2()
+                Image:
+                    source: "community2.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Support Groups'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink2()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink3()
+                Image:
+                    source: "community3.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Make Appointments'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink3()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink4()
+                Image:
+                    source: "community4.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Maps'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink4()
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 2
+            spacing: 32
+            padding: 32
+
+            canvas: 
+                Color:
+                    rgb: 54/255, 57/255, 66/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 100
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release: root.openLink5()
+                Image:
+                    source: "community5.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            LabelButton:
+                bold: True
+                text: 'Local Treatments'
+                font_size: 40
+                text_size: self.size
+                on_release: root.openLink5()
+
+
+        GridLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: 60
+            cols: 6
+            spacing: 25.3
+            padding: 25.3
+
+            canvas: 
+                Color:
+                    rgb: 153/255, 170/255, 181/255, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            canvas:
+                Color:
+                    rgb: .5, .5, .5, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            Button:
+                size_hint_x: None
+                width: 0
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "home.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "camera"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "camera.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "gallery"
+                    root.manager.transition.direction = "right"
+                Image:
+                    source: "gallery.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+                    size: 180, 180
+
+            Button:
+                size_hint_x: None
+                width: 150
+                background_color: 0, 0, 0, 0
+                text_size: self.size
+                on_release:
+                    app.root.current = "login"
+                    root.manager.transition.direction = "left"
+                Image:
+                    source: "logout.png"
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
