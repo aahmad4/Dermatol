@@ -28,13 +28,13 @@ The third component of the repository is the machine learning components. These 
  
  # Installation Steps on Windows:
  * Download all the contents of this repository.
- * Run ```pip install``` for all dependencies of the app in your command line
+ * Run ```pip3 install -r requirements.txt``` for all dependencies of the app in your command line
  * Turn your camera privacy settings on
  * Run main.py
  
  
 
 
-Note: all of the source code can also be seen on GitHub at https://github.com/ShivaGanapathy/Dermatol or _
+Note: all of the source code can also be seen on GitHub at https://github.com/aahmad4/Classifying-Skin-Cancer or https://github.com/ShivaGanapathy/Dermatol 
 
 
