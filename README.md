@@ -27,9 +27,9 @@ The third component of the repository is the machine learning components. These 
  
  
  # Installation Steps on Windows:
- * Download all the contents of this repository.
+ * Download all the contents of this repository
  * Run ```pip3 install -r requirements.txt``` for all dependencies of the app in your command line
- * Turn your camera privacy settings on
+ * Turn your camera privacy settings on ```Note: Your PC must have a camera for this app to run```
  * Run main.py
  
  
