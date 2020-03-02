@@ -7,7 +7,7 @@ Dermatol was made using Python, Kivy, and several machine learning libraries inc
 # Repository Contents
 There are several components to the source code seen in this folder. The first component is the collection of pictures in .png format. These images are used in the application. The second component of the application is the collection of .py files. These python files are main.py, specialbuttons.py, and database.py.
   * main.py:
-    This file contains all of the main logic of the entire application: It is the where all components of the application come     together to function
+    This file contains all of the main logic of the entire application: It is where all the components of the application come     together to function
   * database.py
     This file contains the python script used for the login system of the application
   * specialbuttons.py
