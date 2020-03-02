@@ -82,7 +82,6 @@ isort==4.3.16
 itsdangerous==1.1.0
 jdcal==1.4
 jedi==0.13.3
-Jinja2==2.10
 Js2Py==0.67
 jsonschema==3.0.1
 jupyter==1.0.0
@@ -167,7 +166,6 @@ PyAudio==0.2.11
 pycodestyle==2.5.0
 pycosat==0.6.3
 pycparser==2.19
-pycrypto==2.6.1
 pycurl==7.43.0.2
 pyflakes==2.1.1
 pygame==1.9.6
