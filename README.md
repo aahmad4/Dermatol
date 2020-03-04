@@ -36,6 +36,6 @@ The third component of the repository is the machine learning components. These 
  
 
 
-Note: all of the source code can also be seen on GitHub at https://github.com/aahmad4/Classifying-Skin-Cancer or https://github.com/ShivaGanapathy/Dermatol 
+Note: all of the source code can also be seen on GitHub at https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention or https://github.com/ShivaGanapathy/Dermatol 
 
 
