@@ -35,4 +35,8 @@ The third component of the repository is the machine learning components. These 
  * Note: Your PC must have a camera for this app to run
  * Run main.py
  
+# Disclaimer
+ This product is not intended to diagnose, treat, or replace proper medical treatment. Use for reference only and consult doctor before making any decisions based on this app.
+
+
  
