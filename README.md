@@ -21,7 +21,7 @@ There are several components to the source code seen in this folder. The first c
 The third component of the repository is the machine learning components. These files are cancer_tech.ipynb and cancertech.h5. The jupyter notebook file (cancer_tech.ipynb) details the process that was taken in order to create a neural network and ultimately store the neural network in the keras h5 file. 
 
 ## Neural Network Details
- Our app uses machine learning for creating CNN models. These models are able to classify images. Following are some details about the deep learning model.
+ Our app uses machine learning for creating CNN models. These models are able to classify images. The following are some details about the deep learning model.
  
  The Neural Network:
  * is trained with 3 hidden layers each with 32, 64, and 32 layers respectively.
