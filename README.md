@@ -1,6 +1,8 @@
 # Dermatol
 
-Dermatol is a multiplatform application that: detects signs of skin cancer lesions using bleeding-edge AI technqiues, educates the user about skin cancer, and connects the user to the local dermatology community. All of the app's functionality can be detailed in its app demonstration video [here](https://www.youtube.com/watch?v=x25HVwbnF2c).
+Dermatol is a multiplatform application that: detects signs of skin cancer lesions using bleeding-edge AI technqiues, educates the user about skin cancer, and connects the user to the local dermatology community. All of the app's functionality can be detailed in its app demonstration video [here](https://www.youtube.com/watch?v=x25HVwbnF2c) or down below.
+
+https://www.youtube.com/watch?v=x25HVwbnF2c
 
 ## App Platform
 
