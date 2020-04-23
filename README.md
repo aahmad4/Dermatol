@@ -12,7 +12,7 @@ Dermatol was made using Python, Kivy, and several machine learning libraries inc
 
 ## Repository Contents
 
-There are several components to the source code seen in this folder. The first component is the collection of [pictures](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/tree/master/images) in .png format. These images are used in the application. The second component of the application is the collection of .py files. These python files are [main.py](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/main.py), [specialbuttons.py](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/specialbuttons.py), and database.py.
+There are several components to the source code seen in this folder. The first component is the collection of [pictures](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/tree/master/images) in .png format. These images are used in the application. The second component of the application is the collection of .py files. These python files are [main.py](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/main.py), [specialbuttons.py](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/specialbuttons.py), and [database.py](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/database.py).
   * main.py:
     This file contains all of the main logic of the entire application: It is where all the components of the application come     together to function
   * database.py
