@@ -20,7 +20,7 @@ There are several components to the source code seen in this folder. The first c
   * [specialbuttons.py](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/specialbuttons.py)
     This file contains the special functions needed to display buttons on the graphical user interface in a circular manner.
   
-The third component of the repository is the machine learning components. These files are cancer_tech.ipynb and cancertech.h5. The jupyter notebook file (cancer_tech.ipynb) details the process that was taken in order to create a neural network and ultimately store the neural network in the keras h5 file. 
+The third component of the repository is the machine learning components. These files are [cancer_tech.ipynb](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/cancer_tech.ipynb) and cancertech.h5. The jupyter notebook file (cancer_tech.ipynb) details the process that was taken in order to create a neural network and ultimately store the neural network in the keras h5 file. 
 
 ## Neural Network Details
  Our app uses machine learning for creating CNN models. These models are able to classify images. The following are some details about the deep learning model.
