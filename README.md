@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=x25HVwbnF2c
 
 ## App Platform
 
-Dermatol was made using Python, Kivy, and several machine learning libraries including Tensorflow, Keras, and Sci-Kit Learn. The machine learning component of the application is stored in the file "cancertech.h5", and was trained using the code from "cancer_tech.ipynb" which is stored in jupyter notebook format. The graphical user interface of the application was created with Kivy.
+Dermatol was made using Python, Kivy, and several machine learning libraries including Tensorflow, Keras, and Sci-Kit Learn. The machine learning component of the application is stored in the file [cancertech.h5](https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention/blob/master/cancertech.h5), and was trained using the code from "cancer_tech.ipynb" which is stored in jupyter notebook format. The graphical user interface of the application was created with Kivy.
 
 ![](screenshot.png)
 
