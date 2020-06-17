@@ -35,6 +35,18 @@ The third component of the repository is the machine learning components. These 
 ## Data Source
 In order to train the neural network, data from kaggle was used. The data can be seen [here](https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000).
 
+## Built With
+
+* [Python 3.7.7](https://www.python.org/)
+   * [Kivy](https://kivy.org/)
+   * [Plyer API](https://pypi.org/project/plyer/)
+   * [Keras](https://keras.io/)
+   * [TensorFlow](https://www.tensorflow.org/)
+   * [Scikit Learn](https://scikit-learn.org/)
+   * [OpenCV](https://pypi.org/project/opencv-python/)
+   * [Pillow](https://pypi.org/project/Pillow/)
+   * [Datetime](https://docs.python.org/3/library/datetime.html)
+
 ## Clone
 
 ```bash
