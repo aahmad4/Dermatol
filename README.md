@@ -1,8 +1,12 @@
-# Dermatol
+<h1 align="center">Dermatol</h1> 
 
-Dermatol is a multiplatform application that: detects signs of skin cancer lesions using bleeding-edge AI technqiues, educates the user about skin cancer, and connects the user to the local dermatology community. This app was created as submission for the 2020 Livewell Student App Challenge with my group members Shiva (GH: shivaganapathy), Nico (GH: nico-jimene), and Aakash (GH: aakosk). I was the developer of the group so I was tasked with coding the app, designing the user interface, implementing all of the apps native features, securing the local database/user authentication system, building all the core functionality, and interfacing the machine learning components. All of the app's functionality can be detailed in its app demonstration video [here](https://www.youtube.com/watch?v=x25HVwbnF2c) or down below. 
+<p align="center">
+Dermatol is a multiplatform application that: detects signs of skin cancer lesions using bleeding-edge AI technqiues, educates the user about skin cancer, and connects the user to the local dermatology community. This app was created as submission for the 2020 Livewell Student App Challenge with my group members Shiva (GH: shivaganapathy), Nico (GH: nico-jimene), and Aakash (GH: aakosk). I was the developer of the group so I was tasked with coding the app, designing the user interface, implementing all of the apps native features, securing the local database/user authentication system, building all the core functionality, and interfacing the machine learning components.
+</p>
 
-https://www.youtube.com/watch?v=x25HVwbnF2c
+<p align="center">
+A link to an online demo version can be found here: <a href="https://www.youtube.com/watch?v=x25HVwbnF2c" target="_blank">youtube.com/watch?v=x25HVwbnF2c</a>
+</p>
 
 ## App Platform
 
@@ -47,13 +51,15 @@ In order to train the neural network, data from kaggle was used. The data can be
    * [Pillow](https://pypi.org/project/Pillow/)
    * [Datetime](https://docs.python.org/3/library/datetime.html)
 
-## Clone
+## Setup
+
+#### Clone
 
 ```bash
-git clone https://github.com/aahmad4/Dermatol-Skin-Cancer-Prevention
+git clone https://github.com/aahmad4/Dermatol
 ```
 
-## Installation
+#### Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required packages.
 
@@ -61,9 +67,12 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the req
 pip install -r requirements.txt
 ```
 
-## Usage
+#### Usage
 
 (Note: Your camera privacy settings must be on)
+```
+cd Dermatol
+```
 
 ```python
 python main.py
