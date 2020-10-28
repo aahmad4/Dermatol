@@ -1,7 +1,7 @@
 <h1 align="center">Dermatol</h1> 
 
 <p align="center">
-Dermatol is a multiplatform application that: detects signs of skin cancer lesions using bleeding-edge AI technqiues, educates the user about skin cancer, and connects the user to the local dermatology community. This app was created as submission for the 2020 Livewell Student App Challenge with my group members Shiva (GH: shivaganapathy), Nico (GH: nico-jimene), and Aakash (GH: aakosk). I was the developer of the group so I was tasked with coding the app, designing the user interface, implementing all of the apps native features, securing the local database/user authentication system, building all the core functionality, and interfacing the machine learning components.
+Dermatol is a multiplatform application that: detects signs of skin cancer lesions using bleeding-edge AI technqiues, educates the user about skin cancer, and connects the user to the local dermatology community. This app was created as submission for the 2020 Livewell Student App Challenge with my group members Nico (GH: nico-jimene), and Aakash (GH: aakosk). I was the developer of the group so I was tasked with coding the app, designing the user interface, implementing all of the apps native features, securing the local database/user authentication system, building all the core functionality, and interfacing the machine learning components.
 </p>
 
 <p align="center">
