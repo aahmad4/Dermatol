@@ -15,7 +15,7 @@ kivymd==0.103.0
 nltk==3.4.5
 numpy==1.16.2
 numpydoc==0.8.0
-opencv-python==4.1.2.30
+opencv-python==4.2.0.32
 packaging==19.0
 pandas==0.24.2
 plyer==1.4.2
