@@ -13,7 +13,7 @@ Kivy-examples==1.11.1
 Kivy-Garden==0.1.4
 kivymd==0.103.0
 nltk==3.6.6
-numpy==1.16.2
+numpy==1.21.0
 numpydoc==0.8.0
 opencv-python==4.2.0.32
 packaging==19.0
