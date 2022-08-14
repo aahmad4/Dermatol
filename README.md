@@ -1,7 +1,7 @@
 <h1 align="center">Dermatol</h1> 
 
 <p align="center">
-Dermatol is a multiplatform application that: detects signs of skin cancer lesions using bleeding-edge AI technqiues, educates the user about skin cancer, and connects the user to the local dermatology community. This app was created as submission for the 2020 Livewell Student App Challenge with my group members Nico (GH: nico-jimene), and Aakash (GH: aakosk). I was the developer of the group so I was tasked with coding the app, designing the user interface, implementing all of the apps native features, securing the local database/user authentication system, building all the core functionality, and interfacing the machine learning components.
+Recognized as the "Best Overall College App Runner Up" of the 2020 LiveWell Student App Challenge. An application that classifies skin cancer types, educates the user about skin cancer, and promotes skin safety. A collaboration with my group members Nico (GH: nico-jimene), Aakash (GH: aakosk), and Shiva (GH: shivaganapathy)
 </p>
 
 <p align="center">
@@ -38,18 +38,6 @@ The third component of the repository is the machine learning components. These 
 
 ## Data Source
 In order to train the neural network, data from kaggle was used. The data can be seen [here](https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000).
-
-## Built With
-
-* [Python 3.7.7](https://www.python.org/)
-   * [Kivy](https://kivy.org/)
-   * [Plyer API](https://pypi.org/project/plyer/)
-   * [Keras](https://keras.io/)
-   * [TensorFlow](https://www.tensorflow.org/)
-   * [Scikit Learn](https://scikit-learn.org/)
-   * [OpenCV](https://pypi.org/project/opencv-python/)
-   * [Pillow](https://pypi.org/project/Pillow/)
-   * [Datetime](https://docs.python.org/3/library/datetime.html)
 
 ## Setup
 
